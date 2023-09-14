@@ -3,10 +3,9 @@
 //   Onde C = A + B. Ou seja C[i][j] = A[i][j]+B[i][j].
 
 
+#include <stdio.h>
 
-#include <iostream>
-
-void somaMatriz(int (&A)[3][3], int (&B)[3][3], int (&C)[3][3]) {
+void somaMatriz(int A[3][3], int B[3][3], int C[3][3]) {
   for (int i = 0; i < 3; i++) {
     for (int j = 0; j < 3; j++) {
       C[i][j] = A[i][j] + B[i][j];
@@ -21,11 +20,12 @@ int main() {
 
   somaMatriz(A, B, C);
 
+  printf("Matriz resultante C:\n");
   for (int i = 0; i < 3; i++) {
     for (int j = 0; j < 3; j++) {
-      std::cout << C[i][j] << " ";
+      printf("%d ", C[i][j]);
     }
-    std::cout << std::endl;
+    printf("\n");
   }
 
   return 0;
