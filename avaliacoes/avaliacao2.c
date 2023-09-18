@@ -2,10 +2,9 @@
 // ( numero de linhas igual ao numero de colunas) A, B e C e calcule a Matriz soma C.
 //   Onde C = A + B. Ou seja C[i][j] = A[i][j]+B[i][j].
 
-
 #include <stdio.h>
 
-void somaMatriz(int A[3][3], int B[3][3], int C[3][3]) {
+void somaMatriz(int (*A)[3], int (*B)[3], int (*C)[3]) {
   for (int i = 0; i < 3; i++) {
     for (int j = 0; j < 3; j++) {
       C[i][j] = A[i][j] + B[i][j];
