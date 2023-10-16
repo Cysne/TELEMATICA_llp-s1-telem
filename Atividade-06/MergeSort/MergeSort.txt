@@ -1,0 +1,5 @@
+  No MergeSort Não temos a estrategia de escolher o pivô em vez disso ele divide o array pela metade,  o array arr[] = {12, 11, 13, 5, 6, 7} é ordenado  serão realizadas 5 etapas de divisão e mesclagem
+ é dividido em metades sucessivamente até que cada subarray contenha apenas um elemento, e depois é mesclado de volta.
+1. O array original é dividido pela metade em duas partes iguais.
+2. Cada metade é ordenada recursivamente usando o Merge Sort.
+3. Os subarrays ordenados são mesclados em um único array ordenado.
