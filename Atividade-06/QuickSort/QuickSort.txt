@@ -1,0 +1,6 @@
+  No algoritmo Quick Sort fornecido, a estratégia usada para escolher o pivô é selecionar o último elemento do array como o pivô.
+Essa é uma abordagem comum e é chamada de escolha do pivô.
+A ideia é simples: escolher o último elemento como o pivô  em seguida, reorganizar os elementos do array de forma que todos os elementos menores que o pivô estejam à esquerda e todos
+os elementos maiores estejam à direita. O pivô é colocado em sua posição final, e o array é dividido em duas partes. Esse processo é repetido recursivamente nas duas partes do array.
+  No exemplo do Quick Sort, o array arr[] = {10, 7, 8, 9, 1, 5} é ordenado. O Quick Sort divide o array em subconjuntos menores, chamados partições, usando um pivô e em seguida, ordena essas partições. 
+Para esse array, o Quick Sort realizará 5 testes, já que há 6 elementos no array.
