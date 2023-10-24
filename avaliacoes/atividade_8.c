@@ -55,7 +55,7 @@ void percorrer(fila *f) {  // função para percorrer a fila
 }
 
 int main() {
-    fila *f = (fila*) malloc(sizeof(fila));  // aloca memória para a fila
+    fila *f = (fila*) malloc(sizeof(fila));  // aloca memória para a fila usando a função malloc para alocação de memoria dinamica 
     f->inicio = NULL;  // o início da fila aponta para null
     f->fim = NULL;  // o fim da fila aponta para null
 
