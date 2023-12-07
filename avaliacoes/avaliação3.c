@@ -3,38 +3,47 @@
 
 //2) Gravar em um arquivo a estrutura que foi informada.
 
-
 #include <stdio.h>
+#include <string.h>
 
 struct dados {
-  int idade;
-  char nome[50];
-  char endereco[50];
+ int idade;
+ char nome[50];
+ char endereco[50];
+ char telefone[50];
 };
-
 int main() {
-  struct dados pessoa;
-  FILE *arquivo;
+    struct dados pessoa;
+    FILE *arquivo;
 
-  arquivo = fopen("arquivo.txt", "wb"); 
+    arquivo = fopen("atividade2.txt", "w");
 
-  if (arquivo == NULL) {
-    printf("Erro na abertura do arquivo\n");
-    return 1;
-  }
+    if (arquivo == NULL) {
+        printf("Erro na abertura do arquivo\n");
+        return 1;
+    }
 
-  printf("Digite a idade: ");
-  scanf("%d", &pessoa.idade);
+    printf("Digite a idade: ");
+    scanf("%d", &pessoa.idade);
+    getchar();
 
-  printf("Digite o nome: ");
-  scanf("%s", pessoa.nome);
+    printf("Digite o nome: ");
+    scanf("%[^\n]", pessoa.nome);
+    getchar();
 
-  printf("Digite o endereco: ");
-  scanf("%s", pessoa.endereco);
+    printf("Digite o endereco: ");
+    scanf("%[^\n]", pessoa.endereco);
+    getchar();
 
-  fwrite(&pessoa, sizeof(struct dados), 1, arquivo);
+    printf("Digite o telefone: ");
+    fgets(pessoa.telefone, 50, stdin);
 
-  fclose(arquivo);
+    // Remover o caractere de nova linha do telefone
+    pessoa.telefone[strcspn(pessoa.telefone, "\n")] = '\0';
 
-  return 0;
+    fprintf(arquivo, "Idade: %d\nNome: %s\nEndereco: %s\nTelefone: %s\n", pessoa.idade, pessoa.nome, pessoa.endereco, pessoa.telefone);
+
+    fclose(arquivo);
+
+    return 0;
 }
