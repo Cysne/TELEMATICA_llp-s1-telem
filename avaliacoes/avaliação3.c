@@ -10,7 +10,6 @@ struct dados {
   int idade;
   char nome[50];
   char endereco[50];
-  char telefone[50];
 };
 
 int main() {
@@ -32,9 +31,6 @@ int main() {
 
   printf("Digite o endereco: ");
   scanf("%s", pessoa.endereco);
-
-  printf("Digite o telefone: ");
-  scanf("%s", pessoa.telefone);
 
   fwrite(&pessoa, sizeof(struct dados), 1, arquivo);
 
